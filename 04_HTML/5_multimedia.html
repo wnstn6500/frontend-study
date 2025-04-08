@@ -35,9 +35,48 @@
 
    <!-- video(인라인): 비디오 콘텐츠 삽입 및 재생 -->
    <!-- HTML에서 지원하는 포맷: MP4, WebM, OGG -->
+   <video width="320" height="240" controls>
+    <source src="Wildlife.mp4" type="video/mp4">
+    <source src="Wildlife.webm" type="video/webm">
+   </video>
+   
+   <!-- video 태그의 속성들 -->
    <video width="320" height="240" controls autoplay muted>
     <source src="Wildlife.mp4" type="video/mp4">
     <source src="Wildlife.webm" type="video/webm">
-   </video> 
+   </video>
+
+   <!-- 웹 페이지에서 비디오를 재생하려면 다음을 수행
+    1) YouTube에 동영상 업로드
+    2) 동영상 ID를 기록
+    3) <iframe> 요소 정의
+    4) src속성에 YouTube URL 지정
+    5) width 및 height 속성을 사용하여 플레이어의 크기를 지정
+    6) URL에 다른 매개변수를 추가(아래 참조)
+  -->
+      <!-- inline frame(인라인): HTML 문서 내에 다른 문서를 삽입(웹 페이지 내에 웹 페이지를 표시)-->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mE7w0Z4xFtE?si=tU6NEjvQ5cZfO4Si" frameborder="0"></iframe>
+      <br>
+      <!-- 유튜브 자동재생 + 음소거 -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mE7w0Z4xFtE?si=tU6NEjvQ5cZfO4Si&autoplay=1&mute=1" frameborder="0"></iframe>
+      <br>
+  
+  <!-- 유튜브 재생목록
+    playlist: 재생할 비디오의 목록(쉼표로 구분)
+  -->
+  <!-- 유튜브 반복재생 
+    0: 한 번만 재생(기본값)
+    1: 무한 재생
+  -->
+  <!-- playlist 필수 작성 -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mE7w0Z4xFtE?si=tU6NEjvQ5cZfO4Si&playlist=Z7S8_GraO9k,n9yXBQIzO2w&loop=1" frameborder="0"></iframe>    
+
+  <!-- 유튜브 컨트롤 
+    0: 플레이어 컨트롤 표시 안함
+    1: 플레이어 컨트롤 표시(기본값)
+  -->
+
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mE7w0Z4xFtE?si=tU6NEjvQ5cZfO4Si&controls=0" frameborder="0"></iframe>
 </body>
 </html>
