@@ -196,6 +196,7 @@
 
      <!-- form:(동기식): 사용자가 작성한 내용을 서버로 전송, 어떤 서버로 경로로, 어떤 방식(GET, POST)으로 전달할지 설정 -->
       <form action="/login" method="post">
+        <!-- name 속성: 서버로 전달할 때 유니크하게 구분하기 위한 이름 -->
         <input type="text" name="id">
         <input type="password" name="pw">
         <button type="submit">로그인</button>
