@@ -24,7 +24,7 @@ ul li:nth-child(3){
 }
 
 /* 6. 78 라인의 <h3>태그에 마우스를 올렸을 때의 선택자를 작성 */
-#detail_list h3:hover{
+#detail_list last-child:hover{
   border: 2px solid red;
 }
 
