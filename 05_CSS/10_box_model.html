@@ -124,12 +124,31 @@
       /* border-radius: 0 20px 40px; */
       /* border-radius: 0 20px 40px 60px; */
 
-
       /* Tip! 원 만들기 */
       /* 요소의 길이가 바뀌면 같이 수정해야되는 문제 */
       /* border-radius: 50px; */
       /* Quiz: 상대 단위를 쓰면 해결 */
       border-radius: 50%
+    }
+
+    .container-5 {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+    .container-5.compare {
+      /* border로 인해 요소의 크기가 10px 증가 */
+      border: 5px solid red;
+      /* padding로 인해 요소의 크기가 40px 증가 */
+      padding: 20px;
+      /* 
+        요소의 크기가 150 x 150 으로 늘어남
+        만약 요소의 크기를 100px로 유지하고 싶다면 늘어난 50만큼 빼줘야 함
+      */
+
+      /* 가로 세로 계산에 padding과 border 값도 포함해서 자동으로 content 영역이 줄어듦 */
+      /* 요소에 padding과 border 값이 추가될 때 지정한 크기보다 커지는 것을 방지 */
+      box-sizing: border-box;
     }
 
   </style>
@@ -188,5 +207,69 @@
       <h4>4. border-radius 실습</h4>
       <div class="container-4"></div>
 
+      <h4>5. box-sizing 실습</h4>
+      <div class="container-5 compare">hello</div>
+      <div class="container-5">hello</div>
 </body>
 </html>
+
+<!-- (정리) Quiz
+  Q1: width와 height 속성의 역할은?
+  A1: 가로 너비와 세로 높이
+
+  Q2: width와 height 속성의 기본값은?
+  A2: auto(블록 요소와 인라인 요소에 따라 auto 값의 특성이 달라진다는 것이 중요)
+
+  Q3: max-width와 max-height 속성의 기본값은?
+  A3: none(최대치 제한 없음)
+
+  Q4: min-width와 min-height 속성의 기본값은?
+  A4: 0(최소치 제한 없음), 0에는 따로 단위를 붙일 필요가 없음
+
+  Q5: em 단위의 기준은?
+  A5: 해당 요소의 글꼴 크기
+
+  Q6: 0px과 0vw 중 더 큰 값은?
+  A6: 둘 다 같은 값(0em, 0rem, 0px, 0vw = 0)
+
+  Q7: margin 속성의 역할은?
+  A7: 요소에 외부 여백을 준다
+
+  Q8: margin: 40px 30px 20px;
+      위 코드에서 30px은 어느 방향을 의미하는가?
+  A8: 왼쪽,오른쪽
+
+  Q9: margin: 20px 10px;
+      위 코드에서 20px은 어느 방향을 의미하는가?
+  A9: 상,하
+
+  Q10: padding 속성의 역할은?
+  A10: 요소의 내부(안쪽) 여백
+
+  Q11: padding: 20px 10px 40px 30px;
+      위 코드에서 30px은 어느 방향을 의미하는가?
+  A11: 왼쪽
+  
+  Q12: padding 속성의 특징은?
+  A12: 여백이 추가된 만큼 요소의 크기가 커진다
+
+  Q13: border 속성의 특징은?
+  A13: 테두리 선이 들어가면 요소의 크기가 커진다
+
+  Q14: 두께 2px, 종류 실선, 색상 빨강의 테두리 선을 코드로 작성하시오!
+  A14: border: 2px solid red;
+
+  Q15: 요소의 모서리를 둥글게 깎기 위한 속성은?
+  A15: border-radius
+
+  Q16: width: 100px; padding: 20px; border: 1px solid red;
+      위 코드가 지정된 요소의 실제 가로 너비는?
+  A16: 142px
+
+  Q17: width: 100px; padding: 20px; border: 1px solid red; box-sizing: border-box;
+      위 코드가 지정된 요소의 실제 가로 너비는?
+  A17: 100px
+
+  Q18: box-sizing 속성의 기본값은?
+  A18: content-box
+-->
