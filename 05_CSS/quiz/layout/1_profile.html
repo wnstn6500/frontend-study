@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<style>
+  
+  .red{
+    color: red;
+    font-weight: bold;
+  }
+
+div.profile{
+  text-align: center;
+}
+  div.profile > img{
+    /* (참고) img는 인라인 요소이지만 인라인-블록처럼 동작 */
+    width: 100px;
+    height: auto;
+    /* 요소를 원으로 만들기 */
+    border-radius: 50%;
+    /* 이미지 가운데 정렬하기(2가지) */
+    /* 1) 부모에 text-align: center; */
+    /* 2) 가로 길이를 갖는 블록 요소에 margin: 0 auto; */
+    /* display: block; */
+    /* margin: 0 auto; */
+  }
+  
+  h3.title{
+    text-align: center;
+    font-size: 24px;
+  }
+
+  p.content{
+    text-align: center;
+    
+  }
+
+  div.box{
+    width: 450px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    color: white;
+    box-shadow: 5px 5px black;
+    
+  }
+</style>
+
+
+
+<body>
+  <!-- 주어진 구조 외에 추가 가능 -->
+  <!-- div.profile>img -->
+<div class="profile">
+  <img src="../../images/P20240612_141310000_09690643-2FA8-47AD-8B52-DA2CF37A0E7F.JPG" alt="사진">
+</div>
+
+  <!-- h3.title -->
+<h3 class="title">Baek JunSu</h3>
+
+  <!-- p.content -->
+<p class="content">
+  <span class="red">Full Stack</span> 
+  Developer</p>
+  
+  <!-- div.box -->
+<div class="box">안녕하세요. Baek JunSu 입니다.
+  <br> 현재 웹 프론트엔드/백엔드 수업을 듣고 있으며
+  <br> 취미는 헬스장 입니다.</div>
+  
+</body>
+</html>
