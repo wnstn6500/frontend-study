@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 공통 스타일 */
+    *{
+      box-sizing: border-box;
+    }
+    table{
+      border-collapse: collapse;
+    }
+    img{
+      height: 30px;
+      width: 50px;
+    }
+    .cart-background{
+      background-color: skyblue;
+      width: 1000px;
+    }
+    .inner{
+      width: 80%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .shop{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+    }
+    .cart-list{
+      background-color: white;
+      border-radius: 6px;
+    }
+    .item{
+      width: 60%;
+      text-align: center;
+    }
+    table td{
+      padding: 10px;
+      border-bottom: solid 1px skyblue;
+      
+    }
+
+    .camera{
+      width: 60%;
+    }
+    .total{
+      text-align: right;
+    }
+    
+    .buy{
+      background-color: darkorange;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+    }
+    .buy:hover{
+      cursor: pointer;
+    }
+    .buy:active{box-shadow: 1px 1px 0 rgb(0,0,0,0.5); position: relative; top:2px;}
+  </style>
+</head>
+<body>
+  <div class="cart-background">
+    <!-- 가운데 정렬을 위한 div -->
+    <div class="inner">
+      <h2>장바구니</h2>
+      <!-- 4행 5열 만들기 -->
+      <table class="cart-list">
+        <tbody>
+          <tr>
+            <td colspan="2" class="item" >ITEM</td>            
+            <td>AMOUNT</td>
+            <td>PRICE</td>
+            <td>TOTAL</td>
+          </tr>
+          <tr>
+            <td><img src="images/item1.png" alt="카메라"></td>
+            <td class="camera">카메라</td>
+            <td style="text-align: center;">1</td>
+            <td>100,000</td>
+            <td>100,000</td>
+          </tr>
+          <tr>
+            <td><img src="images/item2.png" alt="신발"></td>
+            <td class="shoes">신발신발신발</td>
+            <td style="text-align: center;">2</td>
+            <td>59,000</td>
+            <td>118,000</td>
+          </tr>
+          <tr>
+            <td colspan="5" class="total">주문금액 218,000원</td>            
+          </tr>
+        </tbody>
+      </table>
+      <div class="shop">
+        <a href="#">계속 쇼핑하기</a>
+        <input class="buy" type="button" value="구매하기">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
