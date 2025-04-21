@@ -1,0 +1,79 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Noto Sans KR", sans-serif;
+   
+
+}
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Han-Sans-Neo{
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+}
+.black-han-sans-regular {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header > .inner {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo image {
+  width: 40px;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  padding: 10px 20px;
+  font-weight: 700;
+}
+header nav ul li a {
+  position: relative;
+}
+header{
+background-color: #fff;
+  border-bottom: 1px solid #c8c8c8;
+  box-shadow: 0 2px 8px rgba(204, 204, 204, .8);
+  background-color: beige;
+  
+  /* 고정된 헤더 만들기 */
+  /* fixed가 되면 width의 기준이 부모 요소가 아니라 뷰포트가 되면서 기준이 끊겨버리고, 내용에 맞춰 최소한으로 축소됨 */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.visual{
+  /* (중요) 
+    헤더가 fixed 되어 일반 배치 흐름에서 벗어남
+    fixed 헤더 다음에 오는 요소(예: 섹션)는 헤더의 높이만큼 외부 여백 추가 필요
+  */
+  margin-top: 60px;
+  width: 100%;
+  background-color: #808080;
+  
+}
+.visual > .inner{
+  height: calc(100vh - 60px);
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.visual > .inner > .whiteblue{
+  color: cornflowerblue;
+}
