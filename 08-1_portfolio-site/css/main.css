@@ -1,12 +1,15 @@
 *{
   box-sizing: border-box;
+  
 }
-
+  
 body{
   font-family: "Noto Sans KR", sans-serif;
-   
+  
+  
 
 }
+
 .special-gothic-expanded-one-regular {
   font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: 400;
@@ -58,10 +61,7 @@ a {
   color: inherit;
 }
 .visual{
-  /* (중요) 
-    헤더가 fixed 되어 일반 배치 흐름에서 벗어남
-    fixed 헤더 다음에 오는 요소(예: 섹션)는 헤더의 높이만큼 외부 여백 추가 필요
-  */
+
   margin-top: 60px;
   width: 100%;
   background-color: #808080;
@@ -72,8 +72,16 @@ a {
   font-size: 70px;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
+  flex-direction: column;
+
+  
 }
-.visual > .inner > .whiteblue{
-  color: cornflowerblue;
+
+#green{
+  color: greenyellow;
+  display: inline;
 }
+
+
