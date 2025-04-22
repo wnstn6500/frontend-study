@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<div class="background">
+
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="css/main.css">
   <!-- ScrollMagic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <!-- main.js -->
   <script defer src="js/main.js"></script>
 
@@ -40,16 +41,16 @@
       <nav class="special-gothic-expanded-one-regular">
         <ul>
           <li>
-            <a href="#">ABOUT</a>
+            <a href="#about">ABOUT</a>
           </li>
           <li>
-            <a href="#">SKILL</a>
+            <a href="#skill">SKILL</a>
           </li>
           <li>
-            <a href="#">PROJECT</a>
+            <a href="#project">PROJECT</a>
           </li>
           <li>
-            <a href="#">CONTACT</a>
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
       </nav>
@@ -59,34 +60,45 @@
   <!-- 본문 -->
   <section class="visual">
     <div class="inner">
-      <h1 class="black-han-sans-regular">
+      <h1 class="black-han-sans-regular animate__animated animate__backInLeft animate__fast">
         안녕하세요
       </h1>
-      <span class="black-han-sans-regular" ><p id="green">신입</p>개발자</span>
-      <span class="black-han-sans-regular">백준수</span>
-      <span class="black-han-sans-regular">입니다.</span>
+      <span class="black-han-sans-regular animate__animated animate__backInRight animate__delay-1s animate__fast" ><p id="green">신입 </p>개발자</span>
+      <span class="black-han-sans-regular animate__animated animate__backInLeft animate__delay-1s animate__fast">백준수 입니다.</span>
+      
     </div>
   </section>
   <section id="about" class="about">
     <div class="inner">
-      <h2 class="black-han-sans-regular">ABOUT</h2>
+      <h2 class="title black-han-sans-regular">ABOUT</h2>
       <div class="about__wrapper">
         <div class="about__img">
-          <img src="images/P20240612_141310000_09690643-2FA8-47AD-8B52-DA2CF37A0E7F.JPG" alt="프로필">
+          <img src="images/66b3e291-6651-4c4d-8bf7-13ab5bb02602.png" alt="프로필">
         </div>
         <div class="about__text">
-          <strong class="slogun black-han-sans-regular">Never Give up</strong>
+          <strong class="slogun font-en">중요한건 꺾이지 않는 마음</strong>
           <h3 class="font-en">Baek Jun Su (1999.07.16)</h3>
           <div>
             <h4 class="font-en">Student</h4>
             <ul>
-              <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
+              <li>취미: 배드민턴,헬스장,넷플릭스</li>
+              <li>24.03 ~ 26.03 한국방송통신대학교 컴퓨터과학과 졸업예정</li>
               <li>25.04 ~ 25.10 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료
               </li>
             </ul>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section id="skill" class="skill scroll-spy">
+    <div class="inner">
+      <h2 class="title black-han-sans-regular">Leaning SKILL</h2>
+      <ul class="skill_list">
+        <li><img src="images/html.jpg" alt="html"></li>
+        <li><img src="images/css.png" alt="css"></li>
+        <li><img src="images/JS.png" alt="js"></li>
+      </ul>
     </div>
   </section>
 </div>

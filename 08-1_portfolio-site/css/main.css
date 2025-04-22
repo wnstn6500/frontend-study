@@ -2,12 +2,19 @@
   box-sizing: border-box;
   
 }
-  
+html {
+  /* 스크롤 이동을 부드럽게 */
+  scroll-behavior: smooth;
+}
 body{
   font-family: "Noto Sans KR", sans-serif;
   
   
 
+}
+img{
+  /* 이미지가 인라인 요소라서 발생하는 문자 기준선(baseline) 아래의 공간을 제거하기 위해 */
+  display: block;
 }
 
 .special-gothic-expanded-one-regular {
@@ -73,15 +80,109 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   flex-direction: column;
+  
+  background-image: url(../images/pngtree-forest-background-picture-image_1917632.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   
 }
 
 #green{
-  color: greenyellow;
+  color: mediumseagreen;
   display: inline;
 }
+
+.title{
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title::after{
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #333;
+  margin: 24px auto 0;
+  /* TODO ::after 주는법 */
+}
+
+/* ABOUT */
+.about{
+  padding: 150px 150px;
+  background-color: darkolivegreen; 
+}
+.about > .inner{
+  position: relative;
+  
+}
+.about .about__wrapper{
+  display: flex;
+  justify-content: center
+}
+.about .about__wrapper .about__img{
+  width: 40%;
+}
+.about .about__wrapper .about__img img{
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
+
+}
+.about .about__wrapper .about__text{
+  width: 40%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.about .about__wrapper .about__text .slogun{
+  font-size: 50px;
+  font-weight: bold;
+}
+.about .about__wrapper .about__text h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+.about .about__wrapper .about__text h4{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.about .about__wrapper .about__text li{
+  line-height: 1.8;
+}
+.about .about__btn{
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+}
+.skill > .inner{
+  position: relative;
+  height: 1000px;
+  
+}
+.skill > .inner > .skill_list{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+    
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.skill.show .skill_list{
+  /* 방법1: position */
+  /* top: 0; */
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
 
 
