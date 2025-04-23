@@ -222,21 +222,17 @@
       <div class="port">
         <div class="port__img">
           <div class="swiper">
-          <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/work_1.jpg" alt="산출물1">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/work_2.jpg" alt="산출물2">
-          </div>
-          <div class="swiper-slide">
-            <img src="images/work_3.jpg" alt="산출물3">
-          </div>
-        </div>
-          <div class="swiper-pagination"></div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/work_1.jpg" alt="산출물1">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/work_2.jpg" alt="산출물2">
+              </div>         
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
         <div class="port__text">
@@ -248,12 +244,119 @@
             <li><span>URL : </span>배포 주소</li>
           </ul>
           <div class="btn-group">
-            <a href="javascript:void(0)" class="btn">README</a>
-            <a href="javascript:void(0)" class="btn btn--brown">모달</a>
+            <a href="javascript:void(0)" class="btn btn-modal">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal-image" data-image-src="images/work_1.jpg">이미지</a>
           </div>
         </div>
       </div>
+      <div class="port">
+        <div class="port__img">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/work_3.jpg" alt="산출물3">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/work_4.jpg" alt="산출물4">
+                </div>
+            </div> 
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+          </div>    
+        </div>            
+            <div class="port__text">
+              <h3>프로젝트명</h3>
+              <ul>
+                <li><span>주요 기능 : </span>주요 기능 설명</li>
+                <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+                <li><span>GitHub : </span>깃허브 주소</li>
+                <li><span>URL : </span>배포 주소</li>
+              </ul>
+              <div class="btn-group">
+                <a href="javascript:void(0)" class="btn btn-modal">README</a>
+                <a href="javascript:void(0)" class="btn btn--brown btn-modal-image"data-image-src="images/work_3.jpg">이미지</a>
+              </div>
+            </div>
+      </div>
     </div>
-  </section>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="contact font-en scroll-spy">
+  <div class="inner">
+    <h2 class="title">CONTACT</h2>
+    <div class="contact__info">
+      <ul>
+        <li>
+          <a href="https://github.com/geoblo" target="_blank">github.com/geoblo</a>
+        </li>
+        <li>010-1234-5678</li>
+        <li>geoblo@naver.com</li>
+      </ul>
+    </div>
+    <div class="contact__sns">
+      <ul>
+        <li>
+          <a href="#인스타그램주소" target="_blank">
+            <img src="images/icon/icon_insta.png" alt="인스타그램">
+          </a>
+        </li>
+        <li>
+          <a href="#유튜브주소" target="_blank">
+            <img src="images/icon/icon_youtube.png" alt="유튜브">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="inner">
+      <p class="copylight">
+        &copy; <span class="this-year"></span>
+        <span class="font-en">Beak Jun su. All Rights Reserved.</span>
+      </p>
+    </div>
+  </footer>
+  <!-- MODAL -->
+  <!-- 모달 배경 -->
+  <div id="modal">
+    <!-- 모달 내용 -->
+    <div class="modal-content">
+      <div class="modal-header">
+        README
+        <span class="material-symbols-outlined btn-close">close</span>
+      </div>
+      <div class="modal-body">
+        <p>여기에 모달 내용이 들어갑니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGE MODAL -->
+  <!-- 모달 배경 -->
+  <div id="imageModal">
+    <!-- 모달 내용 -->
+    <div class="modal-content">
+      <div class="modal-header">
+        이미지
+        <span class="material-symbols-outlined btn-close">close</span>
+      </div>
+      <div class="modal-body">
+        <!-- 방법1: 1픽셀 투명한 GIF -->
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+        <!-- 방법2: 스타일로 display: none + src는 나중에 지정 -->
+        <!-- 방법3: 샘플 로딩 이미지 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP -->
+  <div id="to-top">
+    <a href="#">
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </a>
+  </div>
 </body>
 </html>

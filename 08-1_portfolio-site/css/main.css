@@ -1,7 +1,8 @@
 *{
   box-sizing: border-box;
-  
+  image-rendering: -webkit-optimize-contrast;
 }
+
 html {
   /* 스크롤 이동을 부드럽게 */
   scroll-behavior: smooth;
@@ -29,6 +30,9 @@ img{
   font-family: "Black Han Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.slogun{
+  letter-spacing: 10px;  
 }
 
 header > .inner {
@@ -69,9 +73,9 @@ a {
 }
 .visual{
 
-  margin-top: 60px;
+  /* margin-top: 60px; */
   width: 100%;
-  background-color: #808080;
+  /* background-color: #808080; */
   
 }
 .visual > .inner{
@@ -91,7 +95,7 @@ a {
 }
 
 #green{
-  color: mediumseagreen;
+  color: seagreen;
   display: inline;
 }
 
@@ -113,16 +117,20 @@ a {
 
 /* ABOUT */
 .about{
-  padding: 150px 150px;
-  background-color: darkolivegreen; 
+  padding: 50px 0 200px;
+  background-color: darkolivegreen;
+  
 }
 .about > .inner{
   position: relative;
   
+  
 }
+
 .about .about__wrapper{
   display: flex;
-  justify-content: center
+  justify-content: center;
+  
 }
 .about .about__wrapper .about__img{
   width: 40%;
@@ -139,6 +147,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  
 }
 .about .about__wrapper .about__text .slogun{
   font-size: 50px;
@@ -161,16 +170,28 @@ a {
   bottom: -30px;
   right: 30px;
 }
+/* SKILL */
 .skill > .inner{
   position: relative;
-  height: 1000px;
+  background-color: wheat;
+  padding: 50px 0 300px;
   
+  
+}
+.skill_list .black-han-sans-regular {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+}
+.skill h2{
+  padding: 20px 0 20px;
 }
 .skill > .inner > .skill_list{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-    
+      
   transform: translateY(100px);
   opacity: 0;
   transition: 1s;
@@ -181,8 +202,163 @@ a {
   /* top: 0; */
   transform: translateY(0px);
   opacity: 1;
+  }
+.skillfont{
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+
+/* PROJECT */
+.project img{
+  width: 800px;
+  height: 600px;
+  padding-top: 50px;
+}
+.project span{
+  color: #333;
+  font-size: 40px;
+}
+.project .inner{
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+}
+/* 오버워치 사라졌다 생기는 기능 */
+.overwatch{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.login{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.overwatch img:nth-child(1){
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: 1s;
+}
+.overwatch span{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s;
+}
+.overwatch img:nth-child(3){
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 1s;
+}
+.overwatch img.show:nth-child(1){
+  transform: translateX(0);
+  opacity: 1;
+}
+.overwatch img.show:nth-child(3){
+  transform: translateX(0);
+  opacity: 1;
+}
+.overwatch span.show{
+  transform: translateY(0);
+  opacity: 1;
+}
+/* 로그인 Ui 프로젝트 설명 사라졌다 생기는 기능 */
+.login img:nth-child(1){
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: 1s;
+}
+.login img:nth-child(3){
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 1s;
+}
+.login span{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s;
+}
+.login img.show:nth-child(1){
+  transform: translateX(0);
+  opacity: 1;
+}
+.login img.show:nth-child(3){
+  transform: translateX(0);
+  opacity: 1;
+}
+.login span.show{
+  transform: translateY(0);
+  opacity: 1;
+}
+/* CONTACT */
+.contact {
+  padding: 200px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.contact .contact__info li {
+  line-height: 2;
+  text-align: center;
+  transition: 1s;
+}
+/* 애니메이션 효과 추가 */
+.contact .contact__info li:nth-child(1), 
+.contact .contact__info li:nth-child(3) {
+  /* 오른쪽에서 왼쪽으로 나타나는 */
+  transform: translateX(150px);
+  opacity: 0;
+}
+.contact .contact__info li:nth-child(2){
+  /* 왼쪽에서 오른쪽으로 나타나는 */
+  transform: translateX(-150px);
+  opacity: 0;
+}
+.contact.show .contact__info li{
+  transform: translateX(0);
+  opacity: 1;
+}
+.contact .contact__sns {
+  margin-top: 40px;
+}
+.contact__sns img{
+  height: 60px;
+}
+
+.contact .contact__sns ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+
+}
+
+/* 애니메이션 효과 추가 */
+.contact .contact__sns ul li{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s;  
+}
+.contact.show .contact__sns ul li{
+  transform: translateY(0);
+  opacity: 1;
+}
+.contact.show .contact__sns ul li:nth-child(1) {
+transition-delay: 0.2s; }
+.contact.show .contact__sns ul li:nth-child(2) {
+transition-delay: 0.4s; }
+.contact .contact__sns ul li img {
+  width: 60px;
 }
 
 
 
+/* FOOTER */
+footer{
+  background-color: #000;
+  color: #fff;
+}
+footer .copylight {
+  text-align: center;
+  font-weight: 600px;
+  line-height: 200px;
+}
 
