@@ -13,8 +13,23 @@ spyEls.forEach(function (spyEl) {
   .addTo(controller); // 컨트롤러에 장면을 할당(필수!) -라이브러리에서 지정한 문법으로 깊게 이해x
 });
 
-
+// 연도
 console.log(new Date().getFullYear());
 const thisYear = document.querySelector('.this-year')
 thisYear.textContent = new Date().getFullYear();
 
+// 모바일용 버튼
+const btnHamburger = document.querySelector('.btn-hamburger');
+const navEl = document.querySelector('header nav');
+const menuItems = document.querySelectorAll('header nav ul li a');
+
+btnHamburger.addEventListener('click', function () {
+  
+  navEl.classList.toggle('active');
+});
+
+menuItems.forEach(function (menu , index) {
+  menu.addEventListener('click',function () {
+    navEl.classList.remove('active');
+})
+});
