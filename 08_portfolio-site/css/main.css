@@ -176,6 +176,7 @@ header .btn-hamburger .material-symbols-outlined {
   font-size: 70px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .visual > .inner .purple {
   color:#9b30ff
@@ -253,6 +254,8 @@ align-items: center;
   display: flex;
   justify-content: space-evenly;
   text-align: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 /* 하위 선택자가 아닌 자식 선택자 쓴 것에 유의 */
 .skill .skill__list > li{
@@ -488,6 +491,11 @@ footer .copylight {
   .tiger::after {
     width: 60px;
   }
+  .skill_list > li:nth-child(3) img{
+    
+    margin-left: 40px;
+    
+  }
 
   header .btn-hamburger{
     display: block;
@@ -524,7 +532,54 @@ footer .copylight {
   header nav.active{
     height: 100%;
   }
+  .about {
+    padding: 100px 0;
+  }
+  .about .about__wrapper {
+    flex-direction: column;
+  }
+  .about .about__wrapper .about__img {
+    width: 100%;
+  }
+  .about .about__wrapper .about__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skill {
+    padding: 100px 0;
+  }
+
+  .project {
+    padding: 100px 0;
+  }
+  .project .port {
+    flex-direction: column;
+    margin-top: 40px 0;
+  }
+  .project .port .port__img, 
+  .project .port .port__text {
+    width: 100%;
+  }
+  .project .port .port__text {
+    padding: 20px 0 0;
+  }
+
+  .contact {
+    padding: 100px 0;
+  }
+
+  #modal .modal-content,
+  #imageModal .modal-content {
+    width: 80%;
+  }
+  #imageModal .modal-body img {
+    width: 100%;
+  }
+
+
 }
+
 
 
 /* 애니메이션 정의는 맨 마지막에 */

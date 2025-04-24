@@ -67,6 +67,15 @@ background-color: #fff;
   top: 0;
   z-index: 9;
 }
+header .btn-hamburger {
+  display: none;
+}
+header .btn-hamburger .material-symbols-outlined {
+  font-size: 40px;
+  /* 수직 정렬 맞추기 */
+  display: block;
+  /* line-height: 60px; */
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -79,7 +88,7 @@ a {
   
 }
 .visual > .inner{
-  height: calc(100vh - 60px);
+  height: 100vh;
   font-size: 70px;
   display: flex;
   align-items: center;
@@ -218,13 +227,15 @@ a {
 
 /* PROJECT */
 .project img{
-  width: 800px;
-  height: 600px;
-  padding-top: 50px;
+  width: 600px;
+  height: 500px;
+  padding-top: 30px;
 }
 .project span{
   color: #333;
   font-size: 40px;
+  display: flex;
+  justify-content: center;
 }
 .project .inner{
   padding-top: 50px;
@@ -235,9 +246,12 @@ a {
 /* 오버워치 사라졌다 생기는 기능 */
 .overwatch{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  column-gap: 50px;
 }
+
+
 .login{
   display: flex;
   justify-content: space-between;
@@ -248,12 +262,14 @@ a {
   opacity: 0;
   transition: 1s;
 }
-.overwatch span{
+.project span{
   transform: translateY(100px);
   opacity: 0;
   transition: 1s;
+  margin-top: 20px;
+  
 }
-.overwatch img:nth-child(3){
+.overwatch img:nth-child(2){
   transform: translateX(100px);
   opacity: 0;
   transition: 1s;
@@ -262,17 +278,23 @@ a {
   transform: translateX(0);
   opacity: 1;
 }
-.overwatch img.show:nth-child(3){
+.overwatch img.show:nth-child(2){
   transform: translateX(0);
   opacity: 1;
 }
-.overwatch span.show{
+.project span.show{
   transform: translateY(0);
   opacity: 1;
 }
 /* 로그인 Ui 프로젝트 설명 사라졌다 생기는 기능 */
+
 .login img:nth-child(1){
   transform: translateX(-100px);
+  opacity: 0;
+  transition: 1s;
+}
+.login img:nth-child(2){
+  transform: translateY(100px);
   opacity: 0;
   transition: 1s;
 }
@@ -288,6 +310,10 @@ a {
 }
 .login img.show:nth-child(1){
   transform: translateX(0);
+  opacity: 1;
+}
+.login img.show:nth-child(2){
+  transform: translateY(0);
   opacity: 1;
 }
 .login img.show:nth-child(3){
@@ -337,6 +363,38 @@ a {
   column-gap: 10px;
 
 }
+/* 반응형 애니메이션 추가 */
+@media screen and (max-width: 767px){
+  .special-gothic-expanded-one-regular ul{
+    display: none;
+  }
+  header .btn-hamburger .material-symbols-outlined{
+    display: block;
+  }
+  
+
+
+  /* 모바일에서는 화면의 80%만 차지하도록 */
+  .about .about__wrapper{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about .about__wrapper img{
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .about .about__wrapper .about__text{
+    width: 100%;
+  }
+  .overwatch img{
+    width: 100%;
+  }
+  .login .scroll-spy{
+    width: 100%;
+  }
+  }
 
 /* 애니메이션 효과 추가 */
 .contact .contact__sns ul li{
@@ -355,6 +413,7 @@ transition-delay: 0.4s; }
 .contact .contact__sns ul li img {
   width: 60px;
 }
+
 
 
 
