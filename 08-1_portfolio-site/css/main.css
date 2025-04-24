@@ -196,6 +196,13 @@ a {
   opacity: 0;
   transition: 1s;
 }
+.skill_list > li:nth-child(1) img{
+  margin-bottom: 20px;
+}
+.skill_list > li:nth-child(2) img{
+  padding-top: 30px;
+  margin-left: 30px;
+}
 
 .skill.show .skill_list{
   /* 방법1: position */

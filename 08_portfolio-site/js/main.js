@@ -108,3 +108,24 @@ window.addEventListener('scroll', function () {
     toTopEl.style.transform = 'translateX(100px)';
   }
 });
+
+// 모바일용 메뉴
+const btnHamburger = document.querySelector('.btn-hamburger');
+const navEl = document.querySelector('header nav');
+const menuItems = document.querySelectorAll('header nav ul li a');
+
+btnHamburger.addEventListener('click',function () {
+  // if(navEl.classList.contains('active')){
+  //   navEl.classList.remove('active');
+  // } else {
+  //   navEl.classList.add('active');
+  // } 
+
+  navEl.classList.toggle('active');
+});
+
+menuItems.forEach(function (menu , index) {
+  menu.addEventListener('click',function () {
+    navEl.classList.remove('active');
+})
+});
