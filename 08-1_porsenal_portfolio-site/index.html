@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>백준수 포트폴리오</title>
+  <!-- 파비콘 -->
+  <link rel="icon" href="seedfavicon.ico">
+  <!-- reset.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <!-- 구글 머티리얼 아이콘 연결 -->
+  <!-- 구글에서 제공하는 아이콘, 글자처럼 취급 가능한 장점 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- 애니메이트 -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <!-- main.css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- main.js -->
+  <script defer src="js/main.js"></script>
+
+</head>
+<body>
+  <div style="overflow-x: hidden;">
+  <header id="header">
+    <div class="inner">
+      <!-- 로고 -->
+      <a href="http://127.0.0.1:5500/08-1_porsenal_portfolio-site/index.html#" class="logo">
+        <img src="images/seedicon.png" alt="seedlogo">
+      </a>
+      <!-- 메뉴 -->
+      <nav class="special-gothic-expanded-one-regular">
+        <ul>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#skill">SKILL</a>
+          </li>
+          <li>
+            <a href="#project">PROJECT</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 햄버거 버튼 -->
+      <a href="javascript:void(a)" class="btn-hamburger">
+        <span class="material-symbols-outlined">menu</span>
+      </a>
+    </div>
+    
+  </header>
+  <!-- 본문 -->
+  <section class="visual">
+    <div class="inner">
+      <video src="videos/9584-220312371.mp4" muted autoplay loop></video>
+      <h1 class="black-han-sans-regular animate__backInLeft animate__fast animate__animated">
+        안녕하세요
+      </h1>
+      <span class="black-han-sans-regular animate__backInRight animate__delay-1s animate__fast animate__animated" ><p id="green">신입 </p>개발자</span>
+      <span class="black-han-sans-regular animate__backInLeft animate__delay-1s animate__fast animate__animated">백준수 입니다.</span>     
+    </div>
+  </section>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="inner">
+      <video src="videos/wave.mp4" muted autoplay loop></video>
+      <h2 class="title black-han-sans-regular">ABOUT</h2>
+      <div class="about__wrapper">
+        <div class="about__img">
+          <img src="images/66b3e291-6651-4c4d-8bf7-13ab5bb02602.png" alt="프로필">
+        </div>
+        <div class="about__text">
+          <strong class="slogun black-han-sans-regular">SLOGAN</strong>
+          <h2 class="slogun font-en">NoPain Nogain</h2>
+          <h3 class="font-en">Baek Jun Su (1999.07.16)</h3>
+          <div>
+            <h4 class="font-en">Student</h4>
+            <ul>              
+              <li>취미: 배드민턴,헬스장,넷플릭스,유튜브</li>
+              <li>25.04 ~ 25.10 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료예정
+              <li>~ 26.03 컴퓨터과학과 졸업예정</li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SKILL -->
+  <section id="skill" class="skill scroll-spy">
+    <div class="inner">      
+      <h2 class="title black-han-sans-regular">Leaning SKILL</h2>
+      <ul class="skill_list">
+        <li>
+          <img class="thumb" src="images/html-removebg-preview.png" alt="html">
+          <h3 class="black-han-sans-regular">HTML</h3>
+          <ul class="skillfont">
+            <li>웹페이지 구조 설계</li>
+            <li>시맨틱 태그</li>
+          </ul>
+        </li>
+        <li>
+          <img src="images/css-removebg-preview.png" alt="css">
+          <h3 class="black-han-sans-regular">CSS</h3>
+          <ul class="skillfont">
+            <li>웹페이지 레이아웃 설계</li>
+            <li>웹페이지 디자인</li>
+            <li>반응형 제작</li>
+          </ul>
+        </li>
+        <li>
+          <img src="images/JS.png" alt="js">
+          <h3 class="black-han-sans-regular">JavaScript</h3>
+          <ul class="skillfont">
+            <li>DOM 조작, 제어</li>
+            <li>이벤트 처리</li>
+            <li>비동기 통신</li>
+          </ul>
+        </li>
+        <li>
+          <img src="images/Java-removebg-preview.png" alt="java">
+          <h3 class="black-han-sans-regular">JAVA</h3>
+          <ul class="skillfont">
+            <li>객체지향</li>
+            <li>파일 입출력</li>
+            <li>JDBC</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- PROJECT -->
+  <section id="project" class="project">
+    <div class="inner">
+      <h2 class="title black-han-sans-regular">PROJECT
+      </h2>
+      <span class="black-han-sans-regular scroll-spy">css를 이용한 오버워치 캐릭터 선택창 만들기</span>
+      <div class="overwatch">
+        <img class="scroll-spy" src="images/overwatch.jpg" alt="오버워치">
+        <img class="scroll-spy" src="images/overwatchcss.jpg" alt="오버워치code">
+      </div>
+      <span class="black-han-sans-regular scroll-spy">JavaScript를 이용한 로그인 Ui 만들기</span>
+      <div class="login">
+        <img class="scroll-spy" src="images/loginui.jpg" alt="로그인Ui">
+        <img class="scroll-spy" src="images/loginui21.jpg" alt="로그인Ui2">
+        <img class="scroll-spy" src="images/loginuicreate.jpg" alt="로그인uicode">
+      </div>
+    </div>
+  </section>
+  <!-- CONTACT -->
+  <section id="contact" class="contact font-en scroll-spy">
+    <div class="inner">
+      <h2 class="title">CONTACT</h2>
+      <div class="contact__info">
+        <ul>
+          <li>
+            <a href="https://github.com/wnstn6500" target="_blank">github.com/wnstn6500</a>
+          </li>
+          <li>010-6493-9906</li>
+          <li>wnstn6500@naver.com</li>
+        </ul>
+      </div>
+      <div class="contact__sns">
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="images/icon_insta.png" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/wnstn6500" target="_blank">
+              <img src="images/github-removebg-preview.png" alt="깃허브">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="inner">
+      <p class="copylight">
+        &copy; <span class="this-year"></span>
+        <span class="font-en">Beak Jun su. All Rights Reserved.</span>       
+      </p>
+    </div>
+  </footer>
+  
+</div>
+<!-- SCROLL TO TOP -->
+  <div id="to-top">
+    <a href="#">
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </a>
+  </div>
+
+</body>
+</html>
