@@ -92,6 +92,10 @@ thisYear.textContent = new Date().getFullYear();
 // 페이지 최상단으로 이동
 const toTopEl = document.querySelector('#to-top');
 
+// font 불러오기
+const fontani = document.querySelectorAll('.visual .font-en span')
+
+
 // 페이지에 스크롤 이벤트 감지를 추가!
 // window: 브라우저 창 객체
 window.addEventListener('scroll', function () {
@@ -103,10 +107,19 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > 500) {
     toTopEl.style.opacity = '1';
     toTopEl.style.transform = 'translateX(0)';
+    fontani.forEach(function (ani , index) {
+      ani.classList.remove('animate-flash')
+    })
   } else {
+    // 요소 숨기기
     toTopEl.style.opacity = '0';
     toTopEl.style.transform = 'translateX(100px)';
-  }
+    // visual 섹션 애니메이션 넣기
+    fontani.forEach(function (ani , index) {
+      ani.classList.add('animate-flash')
+    })
+  
+  } 
 });
 
 // 모바일용 메뉴

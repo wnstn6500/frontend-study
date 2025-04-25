@@ -555,7 +555,7 @@ footer .copylight {
   }
   .project .port {
     flex-direction: column;
-    margin-top: 40px 0;
+    /* margin-top: 40px 0; */
   }
   .project .port .port__img, 
   .project .port .port__text {
