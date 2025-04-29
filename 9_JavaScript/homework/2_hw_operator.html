@@ -4,8 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .bead{
+      background-color: aqua;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      
+    }
+    .beadbox{
+      display: flex;
+    }
+  </style>
 </head>
 <body>
-  
+  <h1>홀수? 짝수?</h1>
+  <button class="plus">구슬 추가</button>
+  <button class="check">홀짝</button>
+  <button class="reset">초기화</button>
+  <div class="beadbox">
+  </div>
+
+  <script>
+    const plusBead = document.querySelector('.plus');
+    const check = document.querySelector('.check');
+    const reset = document.querySelector('.reset');
+    const boxEl = document.querySelector('.beadbox');
+
+    plusBead.addEventListener('click', function () {
+      boxEl.innerHTML = '<div class="bead"></div>'
+    })
+
+
+  </script>
 </body>
 </html>

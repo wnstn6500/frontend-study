@@ -6,21 +6,37 @@
   <title>Document</title>
   <style>
     
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0;
+      }
+    .control{
+
+    }
   </style>
 </head>
 <body>
   <!-- 1번과제 -->
   <div class="growup">
-    <button class="button">+</button>
+    <h1>자라나라 고양이</h1>
+    <button class="button">+</button><br>
     <img src="../../05_CSS/images/cat.jpg" alt="고양이">
   </div>
-  <!-- 2번과제 -->
-  <div>
-    <input type="number">
-    <input type="number">
-    <img src="../../08_portfolio-site/images/logo.png" alt="">
-  </div>
 
+
+  <!-- 2번과제 -->
+  <h3>이미지 크기 조정</h3>
+  <label for="widthValue">가로: </label>
+  <input type="number" id="widthValue">
+  <br>
+  <label for="heightValue">세로: </label>
+  <input type="number" id="heightValue">
+  <button type="button" class="btn-change">변경</button>
+  <br>
+  <img class="logo" src="../../08-1_porsenal_portfolio-site/images/icons8-별-100.png" alt="">
 
 
 
@@ -30,16 +46,35 @@
 
 
   <script>
-    const image = document.querySelector('img');
+    // 1번문제
+    const image = document.querySelector('.growup img');
     const growButton = document.querySelector('.button');
+    const logo = document.querySelector('.logo');
 
     growButton.addEventListener('click', function () {
       let width = image.width;
       let height = image.height;
 
-      image.width = + width + 100;
-      image.height = + height + 100;
-    });   
+      image.width = width + 100;
+      image.height = height + 100;
+    });
+    // 2번문제
+    const widthInput = document.querySelector('#widthValue');
+    const heightInput = document.querySelector('#heightValue');
+    const changeBtn = document.querySelector('.btn-change');
+
+    changeBtn.addEventListener('click', function () {
+      console.log(widthInput.value, heightInput.value);
+      
+      // 방법1
+      // logo.width = widthInput.value;
+      // logo.height = heightInput.value;
+
+      // 방법2
+      logo.style.width = `${widthInput.value}px`;
+      logo.style.height = `${heightInput.value}px`;
+    });
+
   </script>  
 </body>
 </html>

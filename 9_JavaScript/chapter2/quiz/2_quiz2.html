@@ -22,7 +22,7 @@
 
 
     // 2번 풀이
-    const totalPrice = Number(price1) + Number(price2) + Number(price3)
+    const totalPrice = price1 + price2 + price3
     const overPrice = (totalPrice - 10000 + '원 초과');
     result = totalPrice >= 10000 ? overPrice : '돈 관리 잘했어요!'; 
     document.write(result, '<br>');

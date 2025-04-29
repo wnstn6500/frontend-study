@@ -28,10 +28,11 @@
     const oneth = 1200
     const twoth = 1300
     const threeth = 1000
-    const avgSales = (Number(oneth) + Number(twoth) + Number(threeth)) / 3;
+    const avgSales = (oneth + twoth + threeth) / 3;
 
     const fourth = prompt('4분기 판매량은?', '0');
     result = fourth >= avgSales ? '판매량이 평균 이상입니다.' : '판매량이 평균 미달입니다.' 
+    document.write(`1~3분기 평균 판매량: ${avgSales}<br>`);
     document.write(result,'<br>');
 
 
