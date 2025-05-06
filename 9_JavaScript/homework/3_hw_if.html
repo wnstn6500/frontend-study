@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>날씨 확인</h2>
+    <div>
+        <span>계절</span>&nbsp;&nbsp;
+        
+        <input type="radio" name="season" id="spring" value="봄">
+        <label for="spring">봄</label>
+        
+        <input type="radio" name="season" id="summer" value="여름">
+        <label for="summer">여름</label>
+        
+        <input type="radio" name="season" id="autumn" value="가을">
+        <label for="autumn">가을</label>
+
+        <input type="radio" name="season" id="winter" value="겨울">
+        <label for="winter">겨울</label>
+        <br>
+        <label for="gion">기온</label>
+        <input type="number" name="temperature" id="gion" value="">
+        <br>
+
+        <button onclick="checkWeather()">확인</button>
+    </div>
+    <script>
+        function checkWeather(params) {
+            const summer = document.getElementById('summer');
+            const winter = document.getElementById('winter');
+            const degree = document.getElementById('gion');
+
+            const query = 'input[name="season"]:checked'
+            const selectedEls = document.querySelectorAll(query);
+            let result = '';
+            selectedEls.forEach((el) => {
+                result += el.value + ''
+            })
+
+            const temperature = degree.value;
+
+            if (summer.checked) {
+                if (temperature >= 35) {
+                    alert('폭염 경보')
+                } else if (temperature >= 33) {
+                    alert('폭염 주의보')
+                }
+            } if (winter.checked){
+                if (temperature <= -15) {
+                    alert('한파 경보')
+                }
+            } else if (temperature <= -12){
+                alert('한파 주의보')
+
+            } else{
+                alert(result)
+            }
+        }
+
+        
+    
+
+        
+    </script>
+    
+</body>
+</html>

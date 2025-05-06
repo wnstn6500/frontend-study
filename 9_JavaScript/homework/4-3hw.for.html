@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4-3번. 문제의 조건에서 200g이 되면 귤을 그만 따야한다고 명시되어 있지만 
+체험시작 버튼을 누르면 몇 g까지 딸 수 있는지 prompt로 입력받아 처리해 보세요. -->
+
+<h2>귤농장</h2>
+<br>
+<button onclick="start()">체험시작</button>
+<div id="qulbox">
+
+</div>
+    
+<script>
+    function start(params) {
+        prompt('몇g 따실 건가요?')
+        const qulbox = document.getElementById('qulbox');
+        let imageHtml = "";
+        for(let i = 1; i <= 20; i++){
+            let weight = "귤" + i*10 + 'g';
+            const imgEl = "/9_JavaScript/images/gul.png"
+            
+            imageHtml += `${weight}<img src=${imgEl}>`
+
+            document.getElementById('qulbox').innerHTML = imageHtml;
+        }
+    }
+</script>
+</body>
+</html>

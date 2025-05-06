@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #character {
+            height: 20px;
+            
+            
+        }
+        .characterBox{
+            display: flex;
+        }
+        .characterSelect{
+            width: 200px;
+            height: 200px;
+            border: 5px solid yellowgreen;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            z-index: -1;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>스폰지밥, 뚱이, 징징이</h2>
+<div class="characterBox">
+    <select name="character" id="character">
+        <option value="스폰지밥">스폰지밥</option>
+        <option value="뚱이">뚱이</option>
+        <option value="징징이">징징이</option>
+    </select>
+    <div class="characterSelect">
+        <img id="myImage" src="/9_JavaScript/images/sponge.png" alt="">
+    </div>
+</div>
+<script>
+    const selectElement = document.getElementById('character')
+    const imageElement = document.getElementById('myImage')
+
+    selectElement.addEventListener("change", function (params) {
+        const selectedValue = this.value;
+        let imageSrc = "";
+
+        if (selectedValue === "스폰지밥") {
+            imageSrc = "/9_JavaScript/images/sponge.png"
+        } else if (selectedValue === "뚱이") {
+            imageSrc = "/9_JavaScript/images/dung.png"
+        } else if (selectedValue === "징징이") {
+            imageSrc = "/9_JavaScript/images/jing.jpg"
+        } else {
+            imageSrc = ""
+        }
+
+        imageElement.src = imageSrc
+    })
+</script>
+</body>
+</html>

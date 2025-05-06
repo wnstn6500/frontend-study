@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>행 열 갯수 각각 입력받아 테이블 만들기</h2>
+    <button id="createTable" onclick="createTable()">테이블 생성</button>
+    <div id="tablebox">
+
+    </div>
+
+
+    <script>
+        function createTable(params) {
+            const x = prompt('테이블 행의 갯수는?')
+            const y = prompt('테이블 열의 갯수는?')
+
+            let html = '<table border="2">';
+        let num = 0;
+        for(let i = 1; i <= x ; i++){
+        html += `<tr>`;
+        for(let j = 1; j <= y; j++){
+        num += 1;
+        html += `<td>${num}</td>`
+        
+      }
+      html +=`</tr>`;
+      document.getElementById('tablebox').innerHTML = html;
+    }
+    // document.write(html);
+    
+    }
+    </script>
+</body>
+</html>
