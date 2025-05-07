@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,34 @@
 </head>
 <style>
     #radius{
-        width: 150px; 
+    width: 150px; 
     height: 150px;
     border: 4px dotted green;
     border-radius: 40px;
     overflow: hidden;
     }
     .jing{
-        object-fit: cover;
+        /* object-fit: cover; */
+        width: 150px;
+        height: 150px;
     }
 </style>
 <body>
     <div id="radius">
         <img class="jing" src="/9_JavaScript/images/jing.jpg" alt="">
     </div>
-    <input type="range" name="radius" id="" min="0" max="75" step="5">
+    <label for="range"></label>
+    <input type="range" name="radius" id="volume" min="0" max="75" step="5">
+    <span id="volumeValue"></span>
     
 
+    <script>
+        const vol = document.getElementById('volume');
+        const volValue = document.getElementById('volumeValue');
+        vol.addEventListener('input', function () {
+            volValue.textContent = vol.value
+        });
+        
+    </script>
 </body>
 </html>
