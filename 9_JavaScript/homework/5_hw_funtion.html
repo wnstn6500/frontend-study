@@ -6,34 +6,30 @@
     <title>Document</title>
 </head>
 <style>
-    #radius{
+    .jing{
     width: 150px; 
     height: 150px;
     border: 4px dotted green;
     border-radius: 40px;
-    overflow: hidden;
-    }
-    .jing{
-        /* object-fit: cover; */
-        width: 150px;
-        height: 150px;
     }
 </style>
 <body>
-    <div id="radius">
-        <img class="jing" src="/9_JavaScript/images/jing.jpg" alt="">
-    </div>
+    
+    <img class="jing" src="/9_JavaScript/images/jing.jpg" alt="">
+    
     <label for="range"></label>
-    <input type="range" name="radius" id="volume" min="0" max="75" step="5">
-    <span id="volumeValue"></span>
+    <input type="range" name="radius" id="volume" min="0" max="75" step="5" onchange="radiusAdd(this.value)">
+    <span id="volumeValue">40</span>
     
 
     <script>
-        const vol = document.getElementById('volume');
-        const volValue = document.getElementById('volumeValue');
-        vol.addEventListener('input', function () {
-            volValue.textContent = vol.value
-        });
+        const jingImg = document.querySelector('.jing');
+        const volValue = document.querySelector('#volumeValue')
+
+        function radiusAdd(round) {
+            volValue.innerText = round;
+            jingImg.style.borderRadius = round + 'px';
+        }
         
     </script>
 </body>

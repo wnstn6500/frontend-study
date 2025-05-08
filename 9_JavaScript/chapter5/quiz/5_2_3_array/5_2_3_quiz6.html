@@ -19,15 +19,15 @@
       
         while (lottoArr.length < 6) {
          const Lotto = Math.floor(Math.random() * 45) + 1;
-          if (lottoArr.indexOf(Lotto) == -1) {
+          if (!lottoArr.includes(Lotto)) {
             lottoArr.push(Lotto);
           }
         }
 
     
-    lottoArr.sort(function (a, b) {return a - b;});
     
-    document.write(lottoArr);
+    
+    document.write(lottoArr.sort(function (a, b) {return a - b;}));
 
     // 로또 중복없이 문제 참조 링크 https://syeoi.tistory.com/16
 

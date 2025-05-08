@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>내맘대로 랜덤</h2>
+
+  <span>시작</span>
+  <input class="start" type="number">
+  <br>
+  <span>종료</span>
+  <input class="end" type="number">
+  <br>
+  <button id="arrange" onclick="arrangement()">실행</button>
+
+  <script>
+    const startValue = document.querySelector('.start').value;
+    const endValue = document.querySelector('.end').value;
+
+    let arrange = [];
+
+
+    function arrangement(arrange) {
+      for (let i = 0; i < 10; i++) {
+      
+      arrange.push(Math.floor(Math.random() *(endValue - startValue + 1)) + startValue)
+    }
+      
+      alert(arrange)
+    }
+    
+
+    
+
+
+    
+
+  </script>
+</body>
+</html>
