@@ -72,6 +72,8 @@
     // 2. for in 루프 (ES1차)
     // (순서 없이) 객체의 키를 반복
     for (const key in car) {
+      console.log(key); // 'maker', 'color', 'year'
+      
       const value = car[key];
       console.log(key, value);
     }
